@@ -5,6 +5,7 @@ ROS/realsense in upcoming releases. Currently, the API is available in the
 https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/libtm/include/TrackingDevice.h#L508-L515.
 -->
 <launch>
+  <!-- <arg name="tf_publish_rate"     default="30"/> -->
   <arg name="serial_no"           default=""/>
   <arg name="usb_port_id"         default=""/>
   <arg name="device_type"         default="t265"/>
@@ -60,4 +61,6 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
       <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
     </include>
   </group>
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="ko_to_t" args="-0.12 0 0.3 0 3.14 3.14 map T265_odom_frame 100"/> -->
 </launch>
